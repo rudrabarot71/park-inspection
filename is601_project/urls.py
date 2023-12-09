@@ -21,3 +21,4 @@ urlpatterns = [
      path('park_inspection/', include('park_inspection.urls')),
     path('admin/', admin.site.urls),
 ]
+
