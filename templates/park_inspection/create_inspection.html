@@ -1,0 +1,22 @@
+<!-- In your create_inspection.html template -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Inspection</title>
+    {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+<body>
+    <h1>Create Inspection</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Inspection</button>
+    </form>
+
+    <p><a href="{% url 'inspection_list' %}">Back to Inspection List</a></p>
+</body>
+</html>
